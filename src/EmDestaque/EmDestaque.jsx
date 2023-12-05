@@ -7,7 +7,7 @@ export default function EmDestaque(){
     return(
         <div>
           <Header/>
-          <h1>desgtaque</h1>
+          <h1></h1>
         </div>
      );
 }
