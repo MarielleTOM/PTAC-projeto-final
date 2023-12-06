@@ -60,7 +60,7 @@ export default function NovoVideo() {
                 <button class="btn btn-outline-dark">ADD</button>
             </form>
 
-
+            <button class="btn btn-outline-dark" onClick={() => remover (ativ.id)}>Remover</button>
         </div>
     );
 }
