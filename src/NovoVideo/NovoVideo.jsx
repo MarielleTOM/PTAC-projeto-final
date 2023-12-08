@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Header from "../Componentes/Header";
+import { useNavigate } from "react-router-dom";
 export default function NovoVideo() {
 
     const listaLocalStorage = JSON.parse(localStorage.getItem("Lista")) || []
@@ -15,6 +16,8 @@ export default function NovoVideo() {
     useEffect(() => { localStorage.setItem("Lista", JSON.stringify(lista)) }, [lista]);
     console.log(lista)
 
+    const navigate = useNavigate
+    
     const salvar = (e) => {
         e.preventDefault();
         setLista([...lista, {
@@ -26,6 +29,7 @@ export default function NovoVideo() {
         setFamoso("");
         setDescricao("");
         setProdutos("");
+        navigate("/")
 
     }
   
@@ -58,8 +62,6 @@ export default function NovoVideo() {
                  
                 <button class="btn btn-outline-dark">ADD</button>
             </form>
-
-            <button class="btn btn-outline-dark" onClick={() => remover (ativ.id)}>Remover</button>
         </div>
     );
 }
