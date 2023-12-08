@@ -9,7 +9,7 @@ export default function Home(){
 
     return(
     
-        <div>
+        <div> 
           <Header/>
           <Card lista={lista}/>
         </div>
