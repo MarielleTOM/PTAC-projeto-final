@@ -16,11 +16,11 @@ export default function NovoVideo() {
     useEffect(() => { localStorage.setItem("Lista", JSON.stringify(lista)) }, [lista]);
     console.log(lista)
 
-    //const navigate = useNavigate();
+    const navigate = useNavigate();
     
-    const salvar = (e) => {
+    const salvar = async(e) => {
         e.preventDefault();
-        setLista([...lista, {
+        await setLista([...lista, {
             id: id, nomeVideo: nomeVideo, url: url, famoso: famoso, descricao: descricao, produtos: produtos
         }]);
         setId(id + 1);
@@ -29,7 +29,7 @@ export default function NovoVideo() {
         setFamoso("");
         setDescricao("");
         setProdutos("");
-       // navigate("/")
+        navigate("/")
 
     }
   
