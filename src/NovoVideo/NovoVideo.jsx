@@ -16,7 +16,7 @@ export default function NovoVideo() {
     useEffect(() => { localStorage.setItem("Lista", JSON.stringify(lista)) }, [lista]);
     console.log(lista)
 
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
     
     const salvar = (e) => {
         e.preventDefault();
@@ -29,7 +29,7 @@ export default function NovoVideo() {
         setFamoso("");
         setDescricao("");
         setProdutos("");
-        navigate("/")
+       // navigate("/")
 
     }
   
